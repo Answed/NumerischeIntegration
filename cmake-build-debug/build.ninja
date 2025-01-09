@@ -91,6 +91,13 @@ build source/CMakeFiles/NumerischeIntegration.dir/trapeze_rule.cpp.obj: CXX_COMP
   OBJECT_DIR = source\CMakeFiles\NumerischeIntegration.dir
   OBJECT_FILE_DIR = source\CMakeFiles\NumerischeIntegration.dir
 
+build source/CMakeFiles/NumerischeIntegration.dir/shunting_yard.cpp.obj: CXX_COMPILER__NumerischeIntegration_unscanned_Debug C$:/Projects/C++/Uni/NumerischeIntegration/source/shunting_yard.cpp || cmake_object_order_depends_target_NumerischeIntegration
+  DEP_FILE = source\CMakeFiles\NumerischeIntegration.dir\shunting_yard.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Projects/C++/Uni/NumerischeIntegration/include
+  OBJECT_DIR = source\CMakeFiles\NumerischeIntegration.dir
+  OBJECT_FILE_DIR = source\CMakeFiles\NumerischeIntegration.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target NumerischeIntegration
@@ -99,7 +106,7 @@ build source/CMakeFiles/NumerischeIntegration.dir/trapeze_rule.cpp.obj: CXX_COMP
 #############################################
 # Link the executable source\NumerischeIntegration.exe
 
-build source/NumerischeIntegration.exe: CXX_EXECUTABLE_LINKER__NumerischeIntegration_Debug source/CMakeFiles/NumerischeIntegration.dir/main.cpp.obj source/CMakeFiles/NumerischeIntegration.dir/trapeze_rule.cpp.obj
+build source/NumerischeIntegration.exe: CXX_EXECUTABLE_LINKER__NumerischeIntegration_Debug source/CMakeFiles/NumerischeIntegration.dir/main.cpp.obj source/CMakeFiles/NumerischeIntegration.dir/trapeze_rule.cpp.obj source/CMakeFiles/NumerischeIntegration.dir/shunting_yard.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = source\CMakeFiles\NumerischeIntegration.dir
