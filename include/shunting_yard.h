@@ -1,5 +1,6 @@
 ﻿//
 // Created by Arwed on 1/9/2025.
+// reference: https://en.wikipedia.org/wiki/Shunting-yard_algorithm
 //
 
 #ifndef SHUNTING_YARD_H

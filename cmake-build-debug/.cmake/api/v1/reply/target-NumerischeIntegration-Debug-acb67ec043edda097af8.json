@@ -144,7 +144,7 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "source/shunting_yard.h",
+			"path" : "include/shunting_yard.h",
 			"sourceGroupIndex" : 1
 		}
 	],
