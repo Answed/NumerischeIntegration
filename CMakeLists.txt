@@ -5,6 +5,8 @@ project(NumerischeIntegration
 
 set(CMAKE_CXX_STANDARD 20)
 
+target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
+
 include_directories(include)
 
 add_subdirectory(source)

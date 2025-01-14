@@ -1,0 +1,14 @@
+﻿//
+// Created by arwed on 14/01/2025.
+//
+
+#ifndef NUMERISCHEINTEGRATION_TEST_SHUNTING_YARD_H
+#define NUMERISCHEINTEGRATION_TEST_SHUNTING_YARD_H
+
+
+class test_shunting_yard {
+
+};
+
+
+#endif //NUMERISCHEINTEGRATION_TEST_SHUNTING_YARD_H

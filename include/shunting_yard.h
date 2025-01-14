@@ -11,6 +11,7 @@
 #include <deque>
 #include <vector>
 #include <cstdint>
+#include <math.h>
 
 struct sOperator {
     uint8_t precedence = 0;
@@ -22,9 +23,13 @@ struct sSymbol {
     enum class Type: uint8_t {
         UNKNOWN,
         LITERAL_NUMERIC,
+        CHARACTER,
+        VARIABLE,
         OPERATOR,
         PARANTHESIS_OPEN,
-        PARANTHESIS_CLOSE
+        PARANTHESIS_CLOSE,
+        EULER_NUMBER,
+        PI_NUMBER
     } type = Type::UNKNOWN;
 
     sOperator op;
@@ -32,20 +37,23 @@ struct sSymbol {
 
 class shunting_yard {
 public:
-    explicit shunting_yard(std::string expression);
+    explicit shunting_yard(const std::string& expression);
     double calculate(double x);
 private:
-    std::unordered_map<char, sOperator> mapOps = {
-        {'^',{4,2}},
-        {'/',{3,2}},
-        {'*',{3,2}},
-        {'-',{2,2}},
-        {'+',{2,2}}};
+    std::unordered_map<std::string, sOperator> mapOps = {
+        {"^",{4,2}},
+        {"sin",{4,1}},
+        {"cos",{4,1}},
+        {"tan",{4,1}},
+        {"log",{4,1}},
+        {"ln",{4,1}},
+        {"sqrt", {4,1}},
+        {"/",{3,2}},
+        {"*",{3,2}},
+        {"-",{2,2}},
+        {"+",{2,2}}};
 
 };
 
 inline std::deque<sSymbol> stkOutput;
-
-
-
 #endif //SHUNTING_YARD_H
