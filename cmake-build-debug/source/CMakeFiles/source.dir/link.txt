@@ -1,0 +1,2 @@
+C:\Users\arwed\AppData\Local\Programs\CLIONN~1\bin\mingw\bin\ar.exe qc libsource.a CMakeFiles/source.dir/shunting_yard.cpp.obj
+C:\Users\arwed\AppData\Local\Programs\CLIONN~1\bin\mingw\bin\ranlib.exe libsource.a

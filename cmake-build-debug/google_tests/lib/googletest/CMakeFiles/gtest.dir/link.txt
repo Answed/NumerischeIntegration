@@ -1,0 +1,2 @@
+C:\Users\arwed\AppData\Local\Programs\CLIONN~1\bin\mingw\bin\ar.exe qc ..\..\..\lib\libgtest.a "CMakeFiles/gtest.dir/src/gtest-all.cc.obj"
+C:\Users\arwed\AppData\Local\Programs\CLIONN~1\bin\mingw\bin\ranlib.exe ..\..\..\lib\libgtest.a

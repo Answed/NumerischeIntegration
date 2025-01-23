@@ -1,0 +1,3 @@
+"C:\Users\arwed\AppData\Local\Programs\CLion Nova\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\NumerischeIntegration.dir/objects.a
+C:\Users\arwed\AppData\Local\Programs\CLIONN~1\bin\mingw\bin\ar.exe qc CMakeFiles\NumerischeIntegration.dir/objects.a @CMakeFiles\NumerischeIntegration.dir\objects1.rsp
+C:\Users\arwed\AppData\Local\Programs\CLIONN~1\bin\mingw\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\NumerischeIntegration.dir/objects.a -Wl,--no-whole-archive -o NumerischeIntegration.exe -Wl,--out-implib,libNumerischeIntegration.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\NumerischeIntegration.dir\linkLibs.rsp

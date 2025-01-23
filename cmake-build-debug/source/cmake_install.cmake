@@ -1,4 +1,4 @@
-# Install script for directory: C:/Projects/C++/Uni/NumerischeIntegration/source
+# Install script for directory: C:/Users/arwed/Documents/Coden/CC++/NumerischeIntegration/source
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,6 +34,6 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/Arwed/AppData/Local/Programs/CLion/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Users/arwed/AppData/Local/Programs/CLion Nova/bin/mingw/bin/objdump.exe")
 endif()
 

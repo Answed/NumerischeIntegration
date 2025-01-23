@@ -38,6 +38,7 @@ struct sSymbol {
 class shunting_yard {
 public:
     explicit shunting_yard(const std::string& expression);
+    std::string getOutput();
     double calculate(double x);
 private:
     std::unordered_map<std::string, sOperator> mapOps = {
@@ -52,8 +53,7 @@ private:
         {"*",{3,2}},
         {"-",{2,2}},
         {"+",{2,2}}};
-
+    std::deque<sSymbol> stkOutput;
 };
 
-inline std::deque<sSymbol> stkOutput;
 #endif //SHUNTING_YARD_H

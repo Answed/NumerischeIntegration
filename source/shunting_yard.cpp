@@ -17,7 +17,7 @@ shunting_yard::shunting_yard(const std::string& expression)
         {
             if (symPrevious.type == sSymbol::Type::LITERAL_NUMERIC && !holding.empty())
             {
-                stkOutput.push_front({holding, sSymbol::Type::LITERAL_NUMERIC});
+                stkOutput.push_back({holding, sSymbol::Type::LITERAL_NUMERIC});
                 holding.clear();
             }
             stkHolding.push_front({std::string(1, c), sSymbol::Type::PARANTHESIS_OPEN});
@@ -28,7 +28,7 @@ shunting_yard::shunting_yard(const std::string& expression)
 
             if (symPrevious.type == sSymbol::Type::LITERAL_NUMERIC && !holding.empty())
             {
-                stkOutput.push_front({holding, sSymbol::Type::LITERAL_NUMERIC});
+                stkOutput.push_back({holding, sSymbol::Type::LITERAL_NUMERIC});
                 holding.clear();
             }
             while (!stkHolding.empty() && stkHolding.front().type != sSymbol::Type::PARANTHESIS_OPEN)
@@ -45,9 +45,10 @@ shunting_yard::shunting_yard(const std::string& expression)
 
             symPrevious = {std::string(1, c), sSymbol::Type::PARANTHESIS_CLOSE};
         }
-        else if (mapOps.contains(holding))
+        else if (mapOps.contains(std::string(1,c)) || mapOps.contains(holding))
         {
-            sOperator new_op = mapOps[holding];
+            sOperator new_op = mapOps[std::string(1,c)];
+            stkOutput.push_back({holding, sSymbol::Type::LITERAL_NUMERIC});
             holding.clear();
             if (c == '-' || c == '+')
             {
@@ -60,7 +61,7 @@ shunting_yard::shunting_yard(const std::string& expression)
 
             while (!stkHolding.empty() && stkHolding.front().type != sSymbol::Type::PARANTHESIS_OPEN)
             {
-                if (stkHolding.front().type != sSymbol::Type::OPERATOR)
+                if (stkHolding.front().type == sSymbol::Type::OPERATOR)
                 {
                     const auto& holding_stack_op = stkHolding.front().op;
                     if (holding_stack_op.precedence >= new_op.precedence)
@@ -84,19 +85,19 @@ shunting_yard::shunting_yard(const std::string& expression)
             }
             else if (c=='e')
             {
-                stkOutput.push_front({"2.71828182845904523536028747135266249775724709369995", sSymbol::Type::EULER_NUMBER});
+                stkOutput.push_back({"2.71828182845904523536028747135266249775724709369995", sSymbol::Type::EULER_NUMBER});
                 symPrevious = stkOutput.front();
             }
             else if(c=='p')
             {
-                stkOutput.push_front({"3.14159265358979323846264338327950288419716939937510", sSymbol::Type::PI_NUMBER});
+                stkOutput.push_back({"3.14159265358979323846264338327950288419716939937510", sSymbol::Type::PI_NUMBER});
                 symPrevious = stkOutput.front();
             }
             else if (c==' ')
                 continue;
             else if (c == 'x')
             {
-                stkOutput.push_front({"x", sSymbol::Type::VARIABLE});
+                stkOutput.push_back({"x", sSymbol::Type::VARIABLE});
                 symPrevious = stkOutput.front();
             }
             else
@@ -108,6 +109,11 @@ shunting_yard::shunting_yard(const std::string& expression)
             //TODO: handle unknown symbol
         }
         pass++;
+    }
+
+    if(!holding.empty()){
+        stkOutput.push_back({holding, sSymbol::Type::LITERAL_NUMERIC});
+        holding.clear();
     }
 
     while (!stkHolding.empty())
@@ -167,4 +173,13 @@ double shunting_yard::calculate(double x)
                 break;
         }
     }
+    return stkSolve.front();
+}
+
+std::string shunting_yard::getOutput() {
+    std::string rtnString ="";
+    for (const auto& inst : stkOutput){
+        rtnString.append(inst.symbol);
+    }
+    return rtnString;
 }

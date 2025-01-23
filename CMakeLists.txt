@@ -5,9 +5,10 @@ project(NumerischeIntegration
 
 set(CMAKE_CXX_STANDARD 20)
 
-target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
-
 include_directories(include)
 
 add_subdirectory(source)
+add_subdirectory(google_tests)
+add_executable(${PROJECT_NAME} main.cpp)
 
+target_link_libraries(${PROJECT_NAME} source)
