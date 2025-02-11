@@ -11,15 +11,15 @@
 			"cmake" : "C:/Users/arwed/AppData/Local/Programs/CLion Nova/bin/cmake/win/x64/bin/cmake.exe",
 			"cpack" : "C:/Users/arwed/AppData/Local/Programs/CLion Nova/bin/cmake/win/x64/bin/cpack.exe",
 			"ctest" : "C:/Users/arwed/AppData/Local/Programs/CLion Nova/bin/cmake/win/x64/bin/ctest.exe",
-			"root" : "C:/Users/arwed/AppData/Local/Programs/CLion Nova/bin/cmake/win/x64/share/cmake-3.30"
+			"root" : "C:/Users/arwed/AppData/Local/Programs/CLion Nova/bin/cmake/win/x64/share/cmake-3.31"
 		},
 		"version" : 
 		{
 			"isDirty" : false,
 			"major" : 3,
-			"minor" : 30,
-			"patch" : 5,
-			"string" : "3.30.5",
+			"minor" : 31,
+			"patch" : 4,
+			"string" : "3.31.4",
 			"suffix" : ""
 		}
 	},
@@ -35,7 +35,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cache-v2-d861c86e1d24aa0d2ea8.json",
+			"jsonFile" : "cache-v2-1fd337c7c94b502957a5.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -44,7 +44,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cmakeFiles-v1-1c1b078273286a7d2055.json",
+			"jsonFile" : "cmakeFiles-v1-37a32c6be70d23d08f0b.json",
 			"kind" : "cmakeFiles",
 			"version" : 
 			{
@@ -66,7 +66,7 @@
 	{
 		"cache-v2" : 
 		{
-			"jsonFile" : "cache-v2-d861c86e1d24aa0d2ea8.json",
+			"jsonFile" : "cache-v2-1fd337c7c94b502957a5.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -76,7 +76,7 @@
 		},
 		"cmakeFiles-v1" : 
 		{
-			"jsonFile" : "cmakeFiles-v1-1c1b078273286a7d2055.json",
+			"jsonFile" : "cmakeFiles-v1-37a32c6be70d23d08f0b.json",
 			"kind" : "cmakeFiles",
 			"version" : 
 			{

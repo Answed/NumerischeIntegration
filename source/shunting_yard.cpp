@@ -13,6 +13,7 @@ shunting_yard::shunting_yard(const std::string& expression)
 
     for (const char c : expression)
     {
+
         if (c == '(')
         {
             if (symPrevious.type == sSymbol::Type::LITERAL_NUMERIC && !holding.empty())
@@ -45,7 +46,7 @@ shunting_yard::shunting_yard(const std::string& expression)
 
             symPrevious = {std::string(1, c), sSymbol::Type::PARANTHESIS_CLOSE};
         }
-        else if (mapOps.contains(std::string(1,c)) || mapOps.contains(holding))
+        else if (mapOps.contains(std::string(1,c)))
         {
             sOperator new_op = mapOps[std::string(1,c)];
             stkOutput.push_back({holding, sSymbol::Type::LITERAL_NUMERIC});
@@ -102,7 +103,6 @@ shunting_yard::shunting_yard(const std::string& expression)
             }
             else
             {
-                holding += c;
                 symPrevious = {std::string(1, c), sSymbol::Type::CHARACTER};
             }
 

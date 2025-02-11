@@ -727,7 +727,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "30"
+			"value" : "31"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -739,7 +739,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "5"
+			"value" : "4"
 		},
 		{
 			"name" : "CMAKE_COLOR_DIAGNOSTICS",
@@ -802,7 +802,7 @@
 					"value" : "CXX compiler"
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "STRING",
 			"value" : "C:/Users/arwed/AppData/Local/Programs/CLion Nova/bin/mingw/bin/g++.exe"
 		},
 		{
@@ -946,7 +946,7 @@
 					"value" : "C compiler"
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "STRING",
 			"value" : "C:/Users/arwed/AppData/Local/Programs/CLion Nova/bin/mingw/bin/gcc.exe"
 		},
 		{
@@ -1979,7 +1979,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/arwed/AppData/Local/Programs/CLion Nova/bin/cmake/win/x64/share/cmake-3.30"
+			"value" : "C:/Users/arwed/AppData/Local/Programs/CLion Nova/bin/cmake/win/x64/share/cmake-3.31"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -2488,6 +2488,30 @@
 			],
 			"type" : "STATIC",
 			"value" : "C:/Users/arwed/Documents/Coden/CC++/NumerischeIntegration"
+		},
+		{
+			"name" : "_CMAKE_CXX_LINKER_PUSHPOP_STATE_SUPPORTED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "linker supports push/pop state"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
+		},
+		{
+			"name" : "_CMAKE_C_LINKER_PUSHPOP_STATE_SUPPORTED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "linker supports push/pop state"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
