@@ -13,7 +13,6 @@ shunting_yard::shunting_yard(const std::string& expression)
 
     for (const char c : expression)
     {
-
         if (c == '(')
         {
             if (symPrevious.type == sSymbol::Type::LITERAL_NUMERIC && !holding.empty())
@@ -49,11 +48,14 @@ shunting_yard::shunting_yard(const std::string& expression)
         else if (mapOps.contains(std::string(1,c)))
         {
             sOperator new_op = mapOps[std::string(1,c)];
-            stkOutput.push_back({holding, sSymbol::Type::LITERAL_NUMERIC});
-            holding.clear();
+            if (symPrevious.type == sSymbol::Type::LITERAL_NUMERIC && !holding.empty())
+            {
+                stkOutput.push_back({holding, sSymbol::Type::LITERAL_NUMERIC});
+                holding.clear();
+            }
             if (c == '-' || c == '+')
             {
-                if ((symPrevious.type != sSymbol::Type::LITERAL_NUMERIC && symPrevious.type != sSymbol::Type::PARANTHESIS_CLOSE) || pass == 0)
+                if ((symPrevious.type != sSymbol::Type::LITERAL_NUMERIC && symPrevious.type != sSymbol::Type::PARANTHESIS_CLOSE) && symPrevious.type != sSymbol::Type::CHARACTER && symPrevious.type != sSymbol::Type::VARIABLE || pass == 0)
                 {
                     new_op.precedence = 5;
                     new_op.arguments = 1;
@@ -79,19 +81,19 @@ shunting_yard::shunting_yard(const std::string& expression)
         }
         else
         {
-            if (std::isdigit(c))
+            if (std::isdigit(c) && symPrevious.type != sSymbol::Type::CHARACTER)
             {
                 holding += c;
                 symPrevious = {std::string(1, c), sSymbol::Type::LITERAL_NUMERIC};
             }
             else if (c=='e')
             {
-                stkOutput.push_back({"2.71828182845904523536028747135266249775724709369995", sSymbol::Type::EULER_NUMBER});
+                stkOutput.push_back({"e", sSymbol::Type::EULER_NUMBER});
                 symPrevious = stkOutput.front();
             }
             else if(c=='p')
             {
-                stkOutput.push_back({"3.14159265358979323846264338327950288419716939937510", sSymbol::Type::PI_NUMBER});
+                stkOutput.push_back({"p", sSymbol::Type::PI_NUMBER});
                 symPrevious = stkOutput.front();
             }
             else if (c==' ')
@@ -104,6 +106,28 @@ shunting_yard::shunting_yard(const std::string& expression)
             else
             {
                 symPrevious = {std::string(1, c), sSymbol::Type::CHARACTER};
+                holding += c;
+
+                if (mapOps.contains(holding)) {
+                    sOperator new_op = mapOps[holding];
+                    while (!stkHolding.empty() && stkHolding.front().type != sSymbol::Type::PARANTHESIS_OPEN)
+                    {
+                        if (stkHolding.front().type == sSymbol::Type::OPERATOR)
+                        {
+                            const auto& holding_stack_op = stkHolding.front().op;
+                            if (holding_stack_op.precedence >= new_op.precedence)
+                            {
+                                stkOutput.push_back(stkHolding.front());
+                                stkHolding.pop_front();
+                            }
+                            else
+                                break;
+                        }
+                    }
+                    stkHolding.push_front({holding, sSymbol::Type::OPERATOR, new_op});
+                    symPrevious = stkHolding.front();
+                    holding.clear();
+                }
             }
 
             //TODO: handle unknown symbol
@@ -135,6 +159,12 @@ double shunting_yard::calculate(double x)
                 break;
             case sSymbol::Type::VARIABLE:
                 stkSolve.push_front(x);
+                break;
+            case sSymbol::Type::EULER_NUMBER:
+                stkSolve.push_front(M_E);
+                break;
+            case sSymbol::Type::PI_NUMBER:
+                stkSolve.push_front(M_PI);
                 break;
             case sSymbol::Type::OPERATOR:
             {
