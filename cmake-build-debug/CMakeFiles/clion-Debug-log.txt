@@ -1,4 +1,4 @@
 C:\Users\Arwed\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/Arwed/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -G Ninja -S C:\Projects\C++\Uni\NumerischeIntegration -B C:\Projects\C++\Uni\NumerischeIntegration\cmake-build-debug
--- Configuring done (0.3s)
--- Generating done (0.2s)
+-- Configuring done (0.8s)
+-- Generating done (0.3s)
 -- Build files have been written to: C:/Projects/C++/Uni/NumerischeIntegration/cmake-build-debug

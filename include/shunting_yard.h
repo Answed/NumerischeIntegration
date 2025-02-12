@@ -39,7 +39,7 @@ class shunting_yard {
 public:
     explicit shunting_yard(const std::string& expression);
     std::string getOutput();
-    double calculate(double x);
+    double calculate(double x, double y);
 private:
     std::unordered_map<std::string, sOperator> mapOps = {
         {"^",{4,2}},

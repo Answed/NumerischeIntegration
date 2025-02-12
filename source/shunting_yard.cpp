@@ -103,6 +103,10 @@ shunting_yard::shunting_yard(const std::string& expression)
                 stkOutput.push_back({"x", sSymbol::Type::VARIABLE});
                 symPrevious = stkOutput.front();
             }
+            else if (c == 'y') {
+                stkOutput.push_back({"y", sSymbol::Type::VARIABLE});
+                symPrevious = stkOutput.front();
+            }
             else
             {
                 symPrevious = {std::string(1, c), sSymbol::Type::CHARACTER};
@@ -147,7 +151,7 @@ shunting_yard::shunting_yard(const std::string& expression)
     }
 }
 
-double shunting_yard::calculate(double x)
+double shunting_yard::calculate(double x, double y)
 {
     std::deque<double> stkSolve;
     for (const auto& inst : stkOutput)
@@ -158,7 +162,10 @@ double shunting_yard::calculate(double x)
                 stkSolve.push_front(std::stod(inst.symbol));
                 break;
             case sSymbol::Type::VARIABLE:
-                stkSolve.push_front(x);
+                if (inst.symbol == "x")
+                    stkSolve.push_front(x);
+                else if (inst.symbol == "y")
+                    stkSolve.push_front(y);
                 break;
             case sSymbol::Type::EULER_NUMBER:
                 stkSolve.push_front(M_E);
