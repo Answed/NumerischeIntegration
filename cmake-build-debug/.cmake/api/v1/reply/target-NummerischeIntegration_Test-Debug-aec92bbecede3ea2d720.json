@@ -111,11 +111,11 @@
 		},
 		{
 			"backtrace" : 3,
-			"id" : "gtest::@7505f5ae40ed783d01ec"
+			"id" : "gtest_main::@7505f5ae40ed783d01ec"
 		},
 		{
 			"backtrace" : 3,
-			"id" : "gtest_main::@7505f5ae40ed783d01ec"
+			"id" : "gtest::@7505f5ae40ed783d01ec"
 		}
 	],
 	"id" : "NummerischeIntegration_Test::@da8792dd418ee21a319a",
