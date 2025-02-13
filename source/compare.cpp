@@ -18,8 +18,7 @@ double calculate_avg_percent(std::vector<double> percentValue) {
     for (const auto& percent : percentValue) {
         avgPercent += percent;
     }
-    int test = percentValue.size();
-    return avgPercent / percentValue.size() * 100;
+    return avgPercent / percentValue.size();
 }
 
 
@@ -101,7 +100,6 @@ std::vector<double> compare_runge_kutta_4th_order(shunting_yard &function, numer
     return returnValues;
 }
 
-
 void compare_diff_numeric_functions(const std::string& functionString, const std::string& differentialFunction,
     double lowerLimit, double upperLimit, int iterations, double startValue, double stepLength) {
     shunting_yard function = shunting_yard(functionString);
@@ -118,5 +116,5 @@ void compare_diff_numeric_functions(const std::string& functionString, const std
     std::cout << "Euler Avg Error: " << eulerResult[0] << " Avg Percent: " << eulerResult[1] << std::endl;
     std::cout << "MidPoint Avg Error: " << midPointResult[0] << " Avg Percent: " << midPointResult[1] << std::endl;
     std::cout << "Runge Kutta Avg Error: " << rungeResult[0] << " Avg Percent: " << rungeResult[1] << std::endl;
+    std::cout << std::endl;
 }
-

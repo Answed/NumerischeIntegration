@@ -86,17 +86,51 @@ source/CMakeFiles/source.dir/shunting_yard.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/source.dir/shunting_yard.cpp.s"
 	cd /d C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\cmake-build-debug\source && C:\Users\arwed\AppData\Local\Programs\CLIONN~1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\source\shunting_yard.cpp -o CMakeFiles\source.dir\shunting_yard.cpp.s
 
+source/CMakeFiles/source.dir/numeric_functions.cpp.obj: source/CMakeFiles/source.dir/flags.make
+source/CMakeFiles/source.dir/numeric_functions.cpp.obj: source/CMakeFiles/source.dir/includes_CXX.rsp
+source/CMakeFiles/source.dir/numeric_functions.cpp.obj: C:/Users/arwed/Documents/Coden/CC++/NumerischeIntegration/source/numeric_functions.cpp
+source/CMakeFiles/source.dir/numeric_functions.cpp.obj: source/CMakeFiles/source.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object source/CMakeFiles/source.dir/numeric_functions.cpp.obj"
+	cd /d C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\cmake-build-debug\source && C:\Users\arwed\AppData\Local\Programs\CLIONN~1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/CMakeFiles/source.dir/numeric_functions.cpp.obj -MF CMakeFiles\source.dir\numeric_functions.cpp.obj.d -o CMakeFiles\source.dir\numeric_functions.cpp.obj -c C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\source\numeric_functions.cpp
+
+source/CMakeFiles/source.dir/numeric_functions.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/source.dir/numeric_functions.cpp.i"
+	cd /d C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\cmake-build-debug\source && C:\Users\arwed\AppData\Local\Programs\CLIONN~1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\source\numeric_functions.cpp > CMakeFiles\source.dir\numeric_functions.cpp.i
+
+source/CMakeFiles/source.dir/numeric_functions.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/source.dir/numeric_functions.cpp.s"
+	cd /d C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\cmake-build-debug\source && C:\Users\arwed\AppData\Local\Programs\CLIONN~1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\source\numeric_functions.cpp -o CMakeFiles\source.dir\numeric_functions.cpp.s
+
+source/CMakeFiles/source.dir/compare.cpp.obj: source/CMakeFiles/source.dir/flags.make
+source/CMakeFiles/source.dir/compare.cpp.obj: source/CMakeFiles/source.dir/includes_CXX.rsp
+source/CMakeFiles/source.dir/compare.cpp.obj: C:/Users/arwed/Documents/Coden/CC++/NumerischeIntegration/source/compare.cpp
+source/CMakeFiles/source.dir/compare.cpp.obj: source/CMakeFiles/source.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object source/CMakeFiles/source.dir/compare.cpp.obj"
+	cd /d C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\cmake-build-debug\source && C:\Users\arwed\AppData\Local\Programs\CLIONN~1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/CMakeFiles/source.dir/compare.cpp.obj -MF CMakeFiles\source.dir\compare.cpp.obj.d -o CMakeFiles\source.dir\compare.cpp.obj -c C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\source\compare.cpp
+
+source/CMakeFiles/source.dir/compare.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/source.dir/compare.cpp.i"
+	cd /d C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\cmake-build-debug\source && C:\Users\arwed\AppData\Local\Programs\CLIONN~1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\source\compare.cpp > CMakeFiles\source.dir\compare.cpp.i
+
+source/CMakeFiles/source.dir/compare.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/source.dir/compare.cpp.s"
+	cd /d C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\cmake-build-debug\source && C:\Users\arwed\AppData\Local\Programs\CLIONN~1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\source\compare.cpp -o CMakeFiles\source.dir\compare.cpp.s
+
 # Object files for target source
 source_OBJECTS = \
-"CMakeFiles/source.dir/shunting_yard.cpp.obj"
+"CMakeFiles/source.dir/shunting_yard.cpp.obj" \
+"CMakeFiles/source.dir/numeric_functions.cpp.obj" \
+"CMakeFiles/source.dir/compare.cpp.obj"
 
 # External object files for target source
 source_EXTERNAL_OBJECTS =
 
 source/libsource.a: source/CMakeFiles/source.dir/shunting_yard.cpp.obj
+source/libsource.a: source/CMakeFiles/source.dir/numeric_functions.cpp.obj
+source/libsource.a: source/CMakeFiles/source.dir/compare.cpp.obj
 source/libsource.a: source/CMakeFiles/source.dir/build.make
 source/libsource.a: source/CMakeFiles/source.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libsource.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libsource.a"
 	cd /d C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\cmake-build-debug\source && $(CMAKE_COMMAND) -P CMakeFiles\source.dir\cmake_clean_target.cmake
 	cd /d C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\cmake-build-debug\source && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\source.dir\link.txt --verbose=$(VERBOSE)
 

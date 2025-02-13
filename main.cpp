@@ -7,9 +7,9 @@ void area_numerik_functions() {
     std::string input;
     double lowerLimit;
     double upperLimit;
-    std::cout << "Bitte gebe die Funktion an\n Beachte x ist die Variable p ist Pi sqrt() ist die Wurzel."<< std::endl;
+    std::cout << "Bitte gebe die Funktion an\nBeachte x ist die Variable p ist Pi sqrt() ist die Wurzel."<< std::endl;
     std::cin >> function;
-    std::cout << "Bitte gebe den Intervall an\n Beachte eine Leerstelle zwischen der unteren und oberen Grenze zu lassen -> a b nicht ab" << std::endl;
+    std::cout << "Bitte gebe den Intervall an\nBeachte eine Leerstelle zwischen der unteren und oberen Grenze zu lassen -> a b nicht ab" << std::endl;
     std::cin >> lowerLimit >> upperLimit;
     std::cout << "Bitte gebe die Anzahl der Iterationen an" << std::endl;
     std::cin >> input;
@@ -28,11 +28,11 @@ void differential_numerik_functions() {
     std::string input;
     double lowerLimit;
     double upperLimit;
-    std::cout << "Bitte gebe die Funktion an\n Beachte x ist die Variable p ist Pi sqrt() ist die Wurzel."<< std::endl;
+    std::cout << "Bitte gebe die Funktion die Integriert werden soll an\nBeachte x ist die Variable p ist Pi sqrt() ist die Wurzel."<< std::endl;
     std::cin >> function;
-    std::cout << "Bitte geben Sie die Differentialgleichung (Ableitunbg) der Funktion an" << std::endl;
+    std::cout << "Bitte geben Sie die Exakte Funktion der zu Integrierenden Funktion an" << std::endl;
     std::cin >> differentialFunction;
-    std::cout << "Bitte gebe den Intervall an\n Beachte eine Leerstelle zwischen der unteren und oberen Grenze zu lassen -> a b nicht ab" << std::endl;
+    std::cout << "Bitte gebe den Intervall an\nBeachte eine Leerstelle zwischen der unteren und oberen Grenze zu lassen -> a b nicht ab" << std::endl;
     std::cin >> lowerLimit >> upperLimit;
     std::cout << "Bitte gebe die Anzahl der Iterationen an" << std::endl;
     std::cin >> input;
@@ -51,7 +51,7 @@ int main() {
     std::string input;
 
     while (true) {
-        std::cout << "Bitte wählen Sie ob sie eine Fläche Integrieren wollen oder eine Differentialgleichung.\n Flächenintegration = 1 Differentialgleichungsintegration = 2\nMit exit verlassen Sie das Programm" << std::endl;
+        std::cout << "Bitte wählen Sie ob sie eine Fläche Integrieren wollen oder eine Differentialgleichung.\nFlächenintegration = 1 Differentialgleichungsintegration = 2\nMit exit verlassen Sie das Programm" << std::endl;
         std::cin >> input;
         if (input == "1") {
             area_numerik_functions();

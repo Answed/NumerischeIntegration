@@ -174,6 +174,54 @@ source/fast:
 	cd /d C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\cmake-build-debug && $(MAKE) $(MAKESILENT) -f source\CMakeFiles\source.dir\build.make source/CMakeFiles/source.dir/build
 .PHONY : source/fast
 
+compare.obj: compare.cpp.obj
+.PHONY : compare.obj
+
+# target to build an object file
+compare.cpp.obj:
+	cd /d C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\cmake-build-debug && $(MAKE) $(MAKESILENT) -f source\CMakeFiles\source.dir\build.make source/CMakeFiles/source.dir/compare.cpp.obj
+.PHONY : compare.cpp.obj
+
+compare.i: compare.cpp.i
+.PHONY : compare.i
+
+# target to preprocess a source file
+compare.cpp.i:
+	cd /d C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\cmake-build-debug && $(MAKE) $(MAKESILENT) -f source\CMakeFiles\source.dir\build.make source/CMakeFiles/source.dir/compare.cpp.i
+.PHONY : compare.cpp.i
+
+compare.s: compare.cpp.s
+.PHONY : compare.s
+
+# target to generate assembly for a file
+compare.cpp.s:
+	cd /d C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\cmake-build-debug && $(MAKE) $(MAKESILENT) -f source\CMakeFiles\source.dir\build.make source/CMakeFiles/source.dir/compare.cpp.s
+.PHONY : compare.cpp.s
+
+numeric_functions.obj: numeric_functions.cpp.obj
+.PHONY : numeric_functions.obj
+
+# target to build an object file
+numeric_functions.cpp.obj:
+	cd /d C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\cmake-build-debug && $(MAKE) $(MAKESILENT) -f source\CMakeFiles\source.dir\build.make source/CMakeFiles/source.dir/numeric_functions.cpp.obj
+.PHONY : numeric_functions.cpp.obj
+
+numeric_functions.i: numeric_functions.cpp.i
+.PHONY : numeric_functions.i
+
+# target to preprocess a source file
+numeric_functions.cpp.i:
+	cd /d C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\cmake-build-debug && $(MAKE) $(MAKESILENT) -f source\CMakeFiles\source.dir\build.make source/CMakeFiles/source.dir/numeric_functions.cpp.i
+.PHONY : numeric_functions.cpp.i
+
+numeric_functions.s: numeric_functions.cpp.s
+.PHONY : numeric_functions.s
+
+# target to generate assembly for a file
+numeric_functions.cpp.s:
+	cd /d C:\Users\arwed\Documents\Coden\CC++\NumerischeIntegration\cmake-build-debug && $(MAKE) $(MAKESILENT) -f source\CMakeFiles\source.dir\build.make source/CMakeFiles/source.dir/numeric_functions.cpp.s
+.PHONY : numeric_functions.cpp.s
+
 shunting_yard.obj: shunting_yard.cpp.obj
 .PHONY : shunting_yard.obj
 
@@ -211,6 +259,12 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... source
+	@echo ... compare.obj
+	@echo ... compare.i
+	@echo ... compare.s
+	@echo ... numeric_functions.obj
+	@echo ... numeric_functions.i
+	@echo ... numeric_functions.s
 	@echo ... shunting_yard.obj
 	@echo ... shunting_yard.i
 	@echo ... shunting_yard.s

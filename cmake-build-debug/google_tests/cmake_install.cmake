@@ -1,4 +1,4 @@
-# Install script for directory: C:/Projects/C++/Uni/NumerischeIntegration/google_tests
+# Install script for directory: C:/Users/arwed/Documents/Coden/CC++/NumerischeIntegration/google_tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,11 +34,17 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/Arwed/AppData/Local/Programs/CLion/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Users/arwed/AppData/Local/Programs/CLion Nova/bin/mingw/bin/objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Projects/C++/Uni/NumerischeIntegration/cmake-build-debug/google_tests/lib/cmake_install.cmake")
+  include("C:/Users/arwed/Documents/Coden/CC++/NumerischeIntegration/cmake-build-debug/google_tests/lib/cmake_install.cmake")
 endif()
 
+string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
+       "${CMAKE_INSTALL_MANIFEST_FILES}")
+if(CMAKE_INSTALL_LOCAL_ONLY)
+  file(WRITE "C:/Users/arwed/Documents/Coden/CC++/NumerischeIntegration/cmake-build-debug/google_tests/install_local_manifest.txt"
+     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
+endif()
