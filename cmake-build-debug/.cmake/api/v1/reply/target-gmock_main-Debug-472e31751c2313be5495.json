@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "lib/libgmock.a"
+			"path" : "lib/libgmock_main.a"
 		}
 	],
 	"backtrace" : 3,
@@ -34,7 +34,7 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 97,
+				"line" : 100,
 				"parent" : 0
 			},
 			{
@@ -64,7 +64,7 @@
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 98,
+				"line" : 101,
 				"parent" : 0
 			},
 			{
@@ -106,25 +106,28 @@
 			[
 				{
 					"backtrace" : 8,
-					"path" : "C:/Users/arwed/Documents/Coden/CC++/NumerischeIntegration/include"
-				},
-				{
-					"backtrace" : 9,
-					"path" : "C:/Users/arwed/Documents/Coden/CC++/NumerischeIntegration/google_tests/lib/googlemock/include"
-				},
-				{
-					"backtrace" : 9,
-					"path" : "C:/Users/arwed/Documents/Coden/CC++/NumerischeIntegration/google_tests/lib/googlemock"
+					"isSystem" : true,
+					"path" : "C:/Projects/C++/Uni/NumerischeIntegration/include"
 				},
 				{
 					"backtrace" : 9,
 					"isSystem" : true,
-					"path" : "C:/Users/arwed/Documents/Coden/CC++/NumerischeIntegration/google_tests/lib/googletest/include"
+					"path" : "C:/Projects/C++/Uni/NumerischeIntegration/google_tests/lib/googlemock/include"
 				},
 				{
 					"backtrace" : 9,
 					"isSystem" : true,
-					"path" : "C:/Users/arwed/Documents/Coden/CC++/NumerischeIntegration/google_tests/lib/googletest"
+					"path" : "C:/Projects/C++/Uni/NumerischeIntegration/google_tests/lib/googlemock"
+				},
+				{
+					"backtrace" : 9,
+					"isSystem" : true,
+					"path" : "C:/Projects/C++/Uni/NumerischeIntegration/google_tests/lib/googletest/include"
+				},
+				{
+					"backtrace" : 9,
+					"isSystem" : true,
+					"path" : "C:/Projects/C++/Uni/NumerischeIntegration/google_tests/lib/googletest"
 				}
 			],
 			"language" : "CXX",
@@ -146,10 +149,14 @@
 	[
 		{
 			"backtrace" : 6,
+			"id" : "gmock::@1479435c70a1ccc0e952"
+		},
+		{
+			"backtrace" : 6,
 			"id" : "gtest::@7505f5ae40ed783d01ec"
 		}
 	],
-	"id" : "gmock::@1479435c70a1ccc0e952",
+	"id" : "gmock_main::@1479435c70a1ccc0e952",
 	"install" : 
 	{
 		"destinations" : 
@@ -164,8 +171,8 @@
 			"path" : "C:/Program Files (x86)/NumerischeIntegration"
 		}
 	},
-	"name" : "gmock",
-	"nameOnDisk" : "libgmock.a",
+	"name" : "gmock_main",
+	"nameOnDisk" : "libgmock_main.a",
 	"paths" : 
 	{
 		"build" : "google_tests/lib/googlemock",
@@ -186,7 +193,7 @@
 		{
 			"backtrace" : 3,
 			"compileGroupIndex" : 0,
-			"path" : "google_tests/lib/googlemock/src/gmock-all.cc",
+			"path" : "google_tests/lib/googlemock/src/gmock_main.cc",
 			"sourceGroupIndex" : 0
 		}
 	],

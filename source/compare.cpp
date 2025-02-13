@@ -3,22 +3,17 @@
 //
 
 #include "compare.h"
+#include <cmath>
 
-double calculate_avg_error(const std::vector<double> errorValue) {
-    double avgError = 0;
-    for (const auto& error : errorValue) {
-        avgError += error;
-    }
-    return avgError / errorValue.size();
-}
-
-double calculate_avg_percent(std::vector<double> percentValue) {
+double calculate_avg(std::vector<double> values) {
     double avgPercent = 0;
-    percentValue.erase(percentValue.begin());
-    for (const auto& percent : percentValue) {
+    if (std::isnan(values[0])) {
+        values.erase(values.begin());
+    }
+    for (const auto& percent : values) {
         avgPercent += percent;
     }
-    return avgPercent / percentValue.size();
+    return avgPercent / values.size();
 }
 
 
@@ -57,8 +52,8 @@ std::vector<double> compare_euler(shunting_yard& function, numeric_functions& nu
         std::cout << std::endl;
     }
     std::vector<double> returnValues;
-    returnValues.push_back(calculate_avg_error(errorValues));
-    returnValues.push_back(calculate_avg_percent(percentValues));
+    returnValues.push_back(calculate_avg(errorValues));
+    returnValues.push_back(calculate_avg(percentValues));
     return returnValues;
 }
 
@@ -76,8 +71,8 @@ std::vector<double> compare_mid_point(shunting_yard &function, numeric_functions
         std::cout << std::endl;
     }
     std::vector<double> returnValues;
-    returnValues.push_back(calculate_avg_error(errorValues));
-    returnValues.push_back(calculate_avg_percent(percentValues));
+    returnValues.push_back(calculate_avg(errorValues));
+    returnValues.push_back(calculate_avg(percentValues));
     return returnValues;
 }
 
@@ -95,8 +90,8 @@ std::vector<double> compare_runge_kutta_4th_order(shunting_yard &function, numer
         std::cout << std::endl;
     }
     std::vector<double> returnValues;
-    returnValues.push_back(calculate_avg_error(errorValues));
-    returnValues.push_back(calculate_avg_percent(percentValues));
+    returnValues.push_back(calculate_avg(errorValues));
+    returnValues.push_back(calculate_avg(percentValues));
     return returnValues;
 }
 

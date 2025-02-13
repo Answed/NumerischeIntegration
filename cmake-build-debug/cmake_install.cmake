@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/arwed/Documents/Coden/CC++/NumerischeIntegration
+# Install script for directory: C:/Projects/C++/Uni/NumerischeIntegration
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,25 +34,19 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/arwed/AppData/Local/Programs/CLion Nova/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Users/Arwed/AppData/Local/Programs/CLion/bin/mingw/bin/objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/arwed/Documents/Coden/CC++/NumerischeIntegration/cmake-build-debug/source/cmake_install.cmake")
+  include("C:/Projects/C++/Uni/NumerischeIntegration/cmake-build-debug/source/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/arwed/Documents/Coden/CC++/NumerischeIntegration/cmake-build-debug/google_tests/cmake_install.cmake")
+  include("C:/Projects/C++/Uni/NumerischeIntegration/cmake-build-debug/google_tests/cmake_install.cmake")
 endif()
 
-string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
-       "${CMAKE_INSTALL_MANIFEST_FILES}")
-if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/arwed/Documents/Coden/CC++/NumerischeIntegration/cmake-build-debug/install_local_manifest.txt"
-     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
-endif()
 if(CMAKE_INSTALL_COMPONENT)
   if(CMAKE_INSTALL_COMPONENT MATCHES "^[a-zA-Z0-9_.+-]+$")
     set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
@@ -66,6 +60,8 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/arwed/Documents/Coden/CC++/NumerischeIntegration/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+  string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
+       "${CMAKE_INSTALL_MANIFEST_FILES}")
+  file(WRITE "C:/Projects/C++/Uni/NumerischeIntegration/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

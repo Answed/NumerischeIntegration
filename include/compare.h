@@ -19,7 +19,6 @@ std::vector<double> compare_euler(shunting_yard& function, numeric_functions& nu
 std::vector<double> compare_mid_point(shunting_yard& function, numeric_functions& numericFunctions, double startValue, std::vector<double> xValues, std::vector<double> exactValues, double stepLength);
 std::vector<double> compare_runge_kutta_4th_order(shunting_yard& function, numeric_functions& numericFunctions, double startValue, std::vector<double> xValues, std::vector<double> exactValues, double stepLength);
 
-double calculate_avg_error(const std::vector<double> errorValue);
-double calculate_avg_percent(std::vector<double> percentValue);
+double calculate_avg(std::vector<double> values);
 
 #endif //COMPARE_H
