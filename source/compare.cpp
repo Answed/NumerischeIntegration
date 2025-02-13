@@ -4,7 +4,7 @@
 
 #include "compare.h"
 
-double calculate_avg_error(const std::vector<double> errorValue); {
+double calculate_avg_error(const std::vector<double> errorValue) {
     double avgError = 0;
     for (const auto& error : errorValue) {
         avgError += error;
@@ -12,11 +12,13 @@ double calculate_avg_error(const std::vector<double> errorValue); {
     return avgError / errorValue.size();
 }
 
-double calculate_avg_percent(const std::vector<double> percentValue) {
+double calculate_avg_percent(std::vector<double> percentValue) {
     double avgPercent = 0;
+    percentValue.erase(percentValue.begin());
     for (const auto& percent : percentValue) {
         avgPercent += percent;
     }
+    int test = percentValue.size();
     return avgPercent / percentValue.size() * 100;
 }
 
@@ -47,8 +49,8 @@ std::vector<double> compare_euler(shunting_yard& function, numeric_functions& nu
     std::vector<double> errorValues;
     std::vector<double> percentValues;
     for (int i = 0; i < eulerValues.size(); i++) {
-        errorValues[i] = abs(eulerValues[i]-exactValues[i]);
-        percentValues[i] = errorValues[i]/exactValues[i] * 100;
+        errorValues.push_back(abs(eulerValues[i]-exactValues[i]));
+        percentValues.push_back(errorValues[i]/exactValues[i] * 100);
         std::cout << "Euler y"<< i << " = " << eulerValues[i] << std::endl;
         std::cout << "Exact y"<< i << " = " << exactValues[i] << std::endl;
         std::cout << "Error: " << errorValues[i] << std::endl;
@@ -66,8 +68,8 @@ std::vector<double> compare_mid_point(shunting_yard &function, numeric_functions
     std::vector<double> errorValues;
     std::vector<double> percentValues;
     for (int i = 0; i < midPointValues.size(); i++) {
-        errorValues[i] = abs(midPointValues[i]-exactValues[i]);
-        percentValues[i] = errorValues[i]/exactValues[i] * 100;
+        errorValues.push_back(abs(midPointValues[i]-exactValues[i]));
+        percentValues.push_back(errorValues[i]/exactValues[i] * 100);
         std::cout << "MidPoint y"<< i << " = " << midPointValues[i] << std::endl;
         std::cout << "Exact y"<< i << " = " << exactValues[i] << std::endl;
         std::cout << "Error: " << errorValues[i] << std::endl;
@@ -85,8 +87,8 @@ std::vector<double> compare_runge_kutta_4th_order(shunting_yard &function, numer
     std::vector<double> errorValues;
     std::vector<double> percentValues;
     for (int i = 0; i < rungeValues.size(); i++) {
-        errorValues[i] = abs(rungeValues[i]-exactValues[i]);
-        percentValues[i] = errorValues[i]/exactValues[i] * 100;
+        errorValues.push_back(abs(rungeValues[i]-exactValues[i]));
+        percentValues.push_back(errorValues[i]/exactValues[i] * 100);
         std::cout << "Runge Kutta y"<< i << " = " << rungeValues[i] << std::endl;
         std::cout << "Exact y"<< i << " = " << exactValues[i] << std::endl;
         std::cout << "Error: " << errorValues[i] << std::endl;
@@ -113,5 +115,8 @@ void compare_diff_numeric_functions(const std::string& functionString, const std
     std::vector<double> eulerResult = compare_euler(function, numericFunctions, startValue, xValues, exactValues, stepLength);
     std::vector<double> midPointResult = compare_mid_point(function, numericFunctions, startValue, xValues, exactValues, stepLength);
     std::vector<double> rungeResult = compare_runge_kutta_4th_order(function, numericFunctions, startValue, xValues, exactValues, stepLength);
+    std::cout << "Euler Avg Error: " << eulerResult[0] << " Avg Percent: " << eulerResult[1] << std::endl;
+    std::cout << "MidPoint Avg Error: " << midPointResult[0] << " Avg Percent: " << midPointResult[1] << std::endl;
+    std::cout << "Runge Kutta Avg Error: " << rungeResult[0] << " Avg Percent: " << rungeResult[1] << std::endl;
 }
 

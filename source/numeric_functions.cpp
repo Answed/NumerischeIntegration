@@ -66,4 +66,5 @@ std::vector<double> numeric_functions::calculate_runge_kutta_4th_order(shunting_
         double k4 = stepLength * function.calculate(xValues[i-1] + stepLength, y[i-1] + k3);
         y.push_back(y[i-1] + (k1 + 2 * k2 + 2 * k3 + k4) / 6);
     }
+    return y;
 }
