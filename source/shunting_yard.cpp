@@ -199,6 +199,10 @@ double shunting_yard::calculate(double x, double y)
                     if (inst.symbol == "log") result = log10(mem[0]);
                     if (inst.symbol == "ln") result = log(mem[0]);
                     if (inst.symbol == "sqrt") result = sqrt(mem[0]);
+                    if (inst.symbol == "asin") result = asin(mem[0]);
+                    if (inst.symbol == "acos") result = acos(mem[0]);
+                    if (inst.symbol == "atan") result = atan(mem[0]);
+                    if (inst.symbol == "cbrt") result = cbrt(mem[0]);
                     if (inst.symbol == "-") result = -mem[0];
                     if (inst.symbol == "+") result = mem[0];
                 }
