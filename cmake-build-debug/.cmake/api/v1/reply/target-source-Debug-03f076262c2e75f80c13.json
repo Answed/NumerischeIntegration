@@ -70,7 +70,8 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3
 			]
 		}
 	],
@@ -90,7 +91,8 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3
 			]
 		}
 	],
@@ -112,6 +114,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "source/compare.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "source/trogemetric_degree.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

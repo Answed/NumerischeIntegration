@@ -10,6 +10,7 @@ include_directories(include)
 add_subdirectory(source)
 add_subdirectory(google_tests)
 add_executable(${PROJECT_NAME} main.cpp
+        include/trigometric_degree.h
 )
 
 target_link_libraries(${PROJECT_NAME} source)

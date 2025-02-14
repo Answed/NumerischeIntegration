@@ -12,6 +12,7 @@
 #include <vector>
 #include <cstdint>
 #include <math.h>
+#include "trigometric_degree.h"
 
 struct sOperator {
     uint8_t precedence = 0;
@@ -46,12 +47,18 @@ private:
         {"sin",{4,1}},
         {"cos",{4,1}},
         {"tan",{4,1}},
-        {"log",{4,1}},
-        {"ln",{4,1}},
-        {"sqrt", {4,1}},
         {"asin",{4,1}},
         {"acos",{4,1}},
         {"atan",{4,1}},
+        {"dsin",{4, 1}},
+        {"dcos",{4, 1}},
+        {"dtan",{4, 1}},
+        {"adsin",{4, 1}},
+        {"adcos",{4, 1}},
+        {"adtan",{4, 1}},
+        {"log",{4,1}},
+        {"ln",{4,1}},
+        {"sqrt", {4,1}},
         {"cbrt", {4,1}},
         {"/",{3,2}},
         {"*",{3,2}},
