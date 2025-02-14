@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\johan\Documents\GitHub\arwedtest\NumerischeIntegration\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\johan\Documents\GitHub\arwedtest\NumerischeIntegration\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{76EE1DDD-B6A5-3B85-A725-1492E1129038}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

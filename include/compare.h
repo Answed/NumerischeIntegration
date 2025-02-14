@@ -7,8 +7,10 @@
 
 #include <iostream>
 #include <string>
+#include <cmath>
 #include "shunting_yard.h"
 #include "numeric_functions.h"
+
 
 void compare_area_numeric_functions(const std::string& functionString, double lowerLimit, double upperLimit, int iterations, double exact);
 void compare_trapez(shunting_yard& function, numeric_functions& numericFunctions, double exact);

@@ -11,12 +11,12 @@
 class numeric_functions {
 public:
     numeric_functions(double a, double b, int n) : a(a), b(b), n(n){}
-    double calculate_trapez_rule(shunting_yard& function) const;
-    double calculate_simpson_rule(shunting_yard& function) const;
-    std::vector<double> calculate_euler_rule(shunting_yard& function, double stepLength, double StartValue, const std::vector<double> &xValues) const;
-    std::vector<double> calculate_mid_point_rule(shunting_yard& function, double stepLength, double StartValue, const std::vector<double>& xValues) const;
+    double calculate_trapez_rule(shunting_yard& function);
+    double calculate_simpson_rule(shunting_yard& function);
+    std::vector<double> calculate_euler_rule(shunting_yard& function, double stepLength, double StartValue, const std::vector<double> &xValues);
+    std::vector<double> calculate_mid_point_rule(shunting_yard& function, double stepLength, double StartValue, const std::vector<double>& xValues);
     std::vector<double> calculate_runge_kutta_4th_order(shunting_yard& function, double stepLength, double StartValue, const std::vector<double>& xValues);
-    [[nodiscard]] std::vector<double> calculate_x_values(double stepLength) const;
+    std::vector<double> calculate_x_values(double stepLength);
 
 private:
     const double a;

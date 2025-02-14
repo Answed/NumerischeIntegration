@@ -1,0 +1,10 @@
+^C:\USERS\JOHAN\DOCUMENTS\GITHUB\ARWEDTEST\NUMERISCHEINTEGRATION\BUILD\CMAKEFILES\7A9E63FCE5B8FABA3DC99E0ADCF9C54C\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/johan/Documents/GitHub/arwedtest/NumerischeIntegration -BC:/Users/johan/Documents/GitHub/arwedtest/NumerischeIntegration/Build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/johan/Documents/GitHub/arwedtest/NumerischeIntegration/Build/NumerischeIntegration.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

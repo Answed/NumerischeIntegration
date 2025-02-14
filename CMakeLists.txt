@@ -4,13 +4,10 @@ project(NumerischeIntegration
         DESCRIPTION "A Programm that calculates the integral of a function using different methods.")
 
 set(CMAKE_CXX_STANDARD 20)
-
 include_directories(include)
 
 add_subdirectory(source)
-add_subdirectory(google_tests)
-add_executable(${PROJECT_NAME} main.cpp
-        include/trigometric_degree.h
-)
+add_executable (${PROJECT_NAME} main.cp)
+
 
 target_link_libraries(${PROJECT_NAME} source)

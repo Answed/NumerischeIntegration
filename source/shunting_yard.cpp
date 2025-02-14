@@ -168,10 +168,10 @@ double shunting_yard::calculate(double x, double y)
                     stkSolve.push_front(y);
                 break;
             case sSymbol::Type::EULER_NUMBER:
-                stkSolve.push_front(M_E);
+                stkSolve.push_front(2.7182818284590452354);
                 break;
             case sSymbol::Type::PI_NUMBER:
-                stkSolve.push_front(M_PI);
+                stkSolve.push_front(3.14159265358979323846);
                 break;
             case sSymbol::Type::OPERATOR:
             {

@@ -5,7 +5,7 @@
 #include "trigometric_degree.h"
 
 double degree_to_radian(double degree) {
-    return degree * M_PI / 180;
+    return degree * 3.14159265358979323846 / 180;
 }
 
 double dsin(double degree) {
