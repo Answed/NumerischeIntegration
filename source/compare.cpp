@@ -3,7 +3,7 @@
 //
 
 #include "compare.h"
-#include <cmath>
+
 
 double calculate_avg(std::vector<double> values) {
     double avgPercent = 0;

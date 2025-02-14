@@ -4,7 +4,7 @@
 
 #include "numeric_functions.h"
 
-std::vector<double> numeric_functions::calculate_x_values(const double stepLength) const {
+std::vector<double> numeric_functions::calculate_x_values(const double stepLength){
     std::vector<double> x;
     for (int i = 0; i < n; i++) {
         x.push_back(a + i * stepLength);
@@ -13,7 +13,7 @@ std::vector<double> numeric_functions::calculate_x_values(const double stepLengt
 }
 
 
-double numeric_functions::calculate_trapez_rule(shunting_yard& function) const {
+double numeric_functions::calculate_trapez_rule(shunting_yard& function){
     double sum = 0;
     for (double i = 1; i <= n-1; i++) {
       sum += 2 * function.calculate(a + i/n * (b - a), 0);
@@ -22,9 +22,9 @@ double numeric_functions::calculate_trapez_rule(shunting_yard& function) const {
     return sum * (b - a) / (2 * n);
 }
 
-double numeric_functions::calculate_simpson_rule(shunting_yard& function) const {
+double numeric_functions::calculate_simpson_rule(shunting_yard& function) {
     double sum = 0;
-    double xValue[n+1];
+    double * xValue = new double[n+1]();
     xValue[0] = a;
     for (int i = 1; i <= n; i++) {
         xValue[i] = xValue[0] + static_cast<double>(i)/n * (b - a);
@@ -39,7 +39,7 @@ double numeric_functions::calculate_simpson_rule(shunting_yard& function) const 
     sum += function.calculate(a, 0) + function.calculate(b, 0);
     return sum * (b - a) / (6 * n);
 }
-std::vector<double> numeric_functions::calculate_euler_rule(shunting_yard& function, double stepLength, double StartValue, const std::vector<double> &xValues) const {
+std::vector<double> numeric_functions::calculate_euler_rule(shunting_yard& function, double stepLength, double StartValue, const std::vector<double> &xValues){
     std::vector<double> y;
     y.push_back(StartValue);
     for (int i = 1; i < n; i++) {
@@ -47,7 +47,7 @@ std::vector<double> numeric_functions::calculate_euler_rule(shunting_yard& funct
     }
     return y;
 }
-std::vector<double> numeric_functions::calculate_mid_point_rule(shunting_yard& function, double stepLength, double StartValue, const std::vector<double>& xValues) const {
+std::vector<double> numeric_functions::calculate_mid_point_rule(shunting_yard& function, double stepLength, double StartValue, const std::vector<double>& xValues){
     std::vector<double> y;
     y.push_back(StartValue);
     for (int i = 1; i < n; i++) {

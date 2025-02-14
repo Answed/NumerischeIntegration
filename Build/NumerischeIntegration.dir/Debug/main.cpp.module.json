@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "NumerischeIntegration.dir\\Debug\\main.obj",
+            "outputs": [
+                "C:\\Users\\johan\\Documents\\GitHub\\arwedtest\\NumerischeIntegration\\Build\\NumerischeIntegration.dir\\Debug\\vc143.pdb",
+                "NumerischeIntegration.dir\\Debug\\"
+            ],
+            "requires": []
+        }
+    ]
+}

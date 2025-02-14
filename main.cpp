@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "include/compare.h"
+#include "compare.h"
 
 void area_numerik_functions() {
     std::string function;

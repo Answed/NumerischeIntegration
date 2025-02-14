@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "source.dir\\Debug\\numeric_functions.obj",
+            "outputs": [
+                "C:\\Users\\johan\\Documents\\GitHub\\arwedtest\\NumerischeIntegration\\Build\\source\\Debug\\source.pdb",
+                "source.dir\\Debug\\"
+            ],
+            "requires": []
+        }
+    ]
+}
