@@ -23,3 +23,8 @@
 1113	1299	7612510192714942	NumerischeIntegration.exe	c5316483a488b45e
 56	784	7621055959218055	CMakeFiles/NumerischeIntegration.dir/main.cpp.obj	55ed23c6e0ac08c3
 785	1158	7621055966509070	NumerischeIntegration.exe	c5316483a488b45e
+9	687	7621061393177770	CMakeFiles/NumerischeIntegration.dir/main.cpp.obj	55ed23c6e0ac08c3
+688	893	7621061399959437	NumerischeIntegration.exe	c5316483a488b45e
+6	847	7621066436347166	source/CMakeFiles/source.dir/compare.cpp.obj	b7d93b137c938a2
+848	1123	7621066444771194	source/libsource.a	d373bcf4f3eca7cd
+1123	1351	7621066447514677	NumerischeIntegration.exe	c5316483a488b45e

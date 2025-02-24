@@ -6,14 +6,14 @@
 
 
 double calculate_avg(std::vector<double> values) {
-    double avgPercent = 0;
+    double avg = 0;
     if (std::isnan(values[0])) {
         values.erase(values.begin());
     }
-    for (const auto& percent : values) {
-        avgPercent += percent;
+    for (const auto& value : values) {
+        avg += value;
     }
-    return avgPercent / values.size();
+    return abs(avg/ values.size());
 }
 
 
