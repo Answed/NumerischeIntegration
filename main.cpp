@@ -11,13 +11,10 @@ void area_numerik_functions() {
     std::cin >> function;
     std::cout << "Bitte gebe den Intervall an\nBeachte eine Leerstelle zwischen der unteren und oberen Grenze zu lassen -> a b nicht ab" << std::endl;
     std::cin >> lowerLimit >> upperLimit;
-    std::cout << "Bitte gebe die Anzahl der Iterationen an" << std::endl;
+    std::cout << "Bitte gebe die Anzahl der verwendeten Trapeze an" << std::endl;
     std::cin >> input;
     int iterations = std::stoi(input);
-    std::cout << "Bitte gebe die Schrittweite an" << std::endl;
-    std::cin >> input;
-    int stepLength = std::stoi(input);
-    std::cout << "Bitte gebe das Exakte Ergebniss des Integrals an fuer: " << function << std::endl;
+    std::cout << "Bitte gebe das Exakte Ergebniss des Integrals an in dezimal fuer: " << function << std::endl;
     std::cin >> input;
     double exact = std::stod(input);
     compare_area_numeric_functions(function, lowerLimit, upperLimit, iterations, exact);
@@ -37,9 +34,9 @@ void differential_numerik_functions() {
     std::cout << "Bitte gebe die Schrittweite an" << std::endl;
     std::cin >> input;
     const double stepLength = std::stod(input);
-    std::cout << "Bitte gebe einen Startwert fuer x an" << std::endl;
+    std::cout << "Bitte gebe einen Startwert fuer x an in dezimal" << std::endl;
     std::cin >> lowerLimit;
-    std::cout << "Bitte gebe einen Anfangswert an fuer: " << function << std::endl;
+    std::cout << "Bitte gebe einen Anfangswert in dezimal an fuer: " << function << std::endl;
     std::cin >> input;
     double startValue = std::stod(input);
     compare_diff_numeric_functions(function, differentialFunction, lowerLimit, 0, iterations, startValue, stepLength);
